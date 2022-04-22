@@ -12,7 +12,7 @@ for database in databases:
         print('\nProgress {}/{}'.format(c, total))
         start = time.time()
         # Be sure ArgumentParser is used for your work and change '--epoch', '--database', '--exp_id' to your own parameters.
-        os.system('python VSFA.py --epoch 10 --database {} --exp_id {} >tmp.txt'.format(database, exp_id))
+        os.system('python main.py --epoch 10 --database {} --exp_id {} >tmp.txt'.format(database, exp_id))
         with open("tmp.txt", "r") as file:
             lines = file.readlines()
             with open("log.txt", "a") as f:
